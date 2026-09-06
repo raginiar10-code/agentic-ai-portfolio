@@ -27,7 +27,7 @@ Every agent in this repo follows the same lens:
 ## About me
 
 Ragini AR — Quality Engineering Leader evolving into AI-driven quality systems.
-[LinkedIn](https://www.linkedin.com/) · [Portfolio series posts](https://www.linkedin.com/)
+[LinkedIn](https://www.linkedin.com/in/ragini-a-ravishankar-58b46218/) · [Portfolio series posts](https://www.linkedin.com/)
 
 ## License
 
