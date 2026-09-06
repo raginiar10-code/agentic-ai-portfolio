@@ -12,7 +12,7 @@ I lead quality for complex systems, and agentic AI changes what and how we valid
 
 | # | Agent | What it does | Stack |
 |---|-------|--------------|-------|
-| 01 | [Message Routing Agent](./01-message-routing-agent) | Classifies unstructured inbound messages (Demo / Support / Spam), extracts structured fields, and logs each to the right destination | n8n, OpenAI (GPT-4.1-mini), Google Sheets |
+| 01 | [Message Routing Agent](https://github.com/raginiar10-code/agentic-ai-portfolio/tree/main/01-MES~1) | Classifies unstructured inbound messages (Demo / Support / Spam), extracts structured fields, and logs each to the right destination | n8n, OpenAI (GPT-4.1-mini), Google Sheets |
 
 More coming — one project per week.
 
