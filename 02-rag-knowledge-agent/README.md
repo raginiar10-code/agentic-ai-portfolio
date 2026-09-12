@@ -13,6 +13,20 @@ Two connected pipelines make up the system:
 
 The two pipelines share the same embedding model and Pinecone index, which is what makes retrieval work — the query embedding must live in the same vector space as the ingested documents.
 
+## Live workflow
+
+**Ingestion pipeline in n8n — Google Drive → Pinecone via OpenAI embeddings:**
+
+![Ingestion pipeline canvas](./workflow-ingestion.png)
+
+**Chat pipeline in n8n — AI Agent with retrieval, memory, and Cohere reranker:**
+
+![Chat pipeline canvas](./workflow-chat.png)
+
+**NoveChat answering a grounded question — response comes only from indexed NovaCart documents:**
+
+![NoveChat demo](./demo-novechat.png)
+
 ## Architecture
 
 ### Ingestion pipeline
