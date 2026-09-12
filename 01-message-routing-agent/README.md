@@ -12,6 +12,16 @@ A user sends any message through a chat interface. The agent decides which of th
 
 No fixed workflow. No `if / else` tree hard-coded by a human. The routing happens through the LLM's judgment at runtime, guided by a system prompt.
 
+## Live workflow
+
+   ![Message Routing Agent running in n8n](./workflow-canvas.png)
+
+   *The workflow running end-to-end — chat trigger feeds the AI Agent, which classifies intent and calls exactly one of three Google Sheets tools.*
+
+   ![Support Tickets sheet after test runs](./sheet-support-tickets.png)
+
+   *Result of running test messages: each classified message appended to the correct sheet with structured fields extracted by the LLM.*
+   
 ## Architecture
 
 ```mermaid
