@@ -1,0 +1,226 @@
+{
+  "name": "NovaCart RAG Chat",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "You are a retrieval-augmented assistant for NovaCart.\n\nYOU MUST FOLLOW THIS PROCEDURE FOR EVERY NON-GREETING USER MESSAGE:\n\nStep 1) ALWAYS call the tool \"Nova Pinecone Vector Index\" exactly once before answering.\n- The tool input must be a short search query derived from the user's question (5-12 words).\n- Do NOT answer yet.\n\nStep 2) Read the tool result.\n- If the result is empty OR does not contain the requested metric/timeframe, you MUST reply EXACTLY:\n\"I'm sorry, I don't have that information in my knowledge base. Please try asking a different question.\"\n- You are NOT allowed to respond with anything else in this case.\n\nStep 3) If the tool result contains relevant information:\n- Answer using ONLY the retrieved text.\n- Keep the answer short and direct.\n\nSometimes you might be asked to do comparison with other products from other vendors. In those cases use the built in Web Search Tool to accomplish that.\n\nOUTPUT RULES (final response):\n- Output ONLY the user-facing answer text.\n- NEVER mention tools, retrieval, search, \"used tools\", logs, inputs, outputs, metadata, or reasoning.\n- You are forbidden from printing anything like: [Used tools: ...].\n\nEXCEPTION:\n- If the user message is only a greeting/small talk (e.g., \"hi\", \"hello\", \"how are you\"), do not call the tool; respond politely.\n",
+          "enableStreaming": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        224,
+        0
+      ],
+      "id": "b80ee66f-e05b-44d8-9cd8-b803a256b09f",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1-mini",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1-mini"
+        },
+        "builtInTools": {
+          "webSearch": {
+            "searchContextSize": "medium"
+          }
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.3,
+      "position": [
+        96,
+        208
+      ],
+      "id": "eb76aed6-42df-4a34-beea-2a9b694f5dcd",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "REPLACE_WITH_YOUR_OPENAI_CREDENTIAL_ID",
+          "name": "Your OpenAI Account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.4,
+      "position": [
+        240,
+        208
+      ],
+      "id": "0c625ec5-69fa-48f2-9842-b3740bc8e202",
+      "name": "Simple Memory"
+    },
+    {
+      "parameters": {
+        "mode": "retrieve-as-tool",
+        "toolDescription": "Always use this tool FIRST for any business metrics question (targets, margins, revenue, YoY, 2024/2025). Return the most relevant metric chunks.",
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "REPLACE_WITH_YOUR_PINECONE_INDEX_NAME",
+          "mode": "list",
+          "cachedResultName": "REPLACE_WITH_YOUR_PINECONE_INDEX_NAME"
+        },
+        "useReranker": true,
+        "options": {
+          "pineconeNamespace": "production"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1.3,
+      "position": [
+        384,
+        224
+      ],
+      "id": "fe390a57-4e4f-4055-a344-2413aa071bb7",
+      "name": "Pinecone Vector Store",
+      "credentials": {
+        "pineconeApi": {
+          "id": "REPLACE_WITH_YOUR_PINECONE_CREDENTIAL_ID",
+          "name": "Your Pinecone Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "text-embedding-3-large",
+        "options": {
+          "dimensions": 1024
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        368,
+        400
+      ],
+      "id": "bc9f75cb-33cd-4e5b-b76c-ac3b9d193994",
+      "name": "Embeddings OpenAI",
+      "credentials": {
+        "openAiApi": {
+          "id": "REPLACE_WITH_YOUR_OPENAI_CREDENTIAL_ID",
+          "name": "Your OpenAI Account"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.rerankerCohere",
+      "typeVersion": 1,
+      "position": [
+        576,
+        400
+      ],
+      "id": "35d072c2-dc04-494d-bc7f-da993376eb4a",
+      "name": "Reranker Cohere",
+      "credentials": {
+        "cohereApi": {
+          "id": "REPLACE_WITH_YOUR_COHERE_CREDENTIAL_ID",
+          "name": "Your Cohere Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "public": true,
+        "initialMessages": "Hello 👋! My name is NovaChat. How can I assist you today?",
+        "options": {
+          "subtitle": "Hello 👋! My name is NovaChat. How can I assist you today?",
+          "title": "Welcome to NoveChat!👋",
+          "customCss": "/* After importing this workflow, paste the contents of chat-styling.css (in this repo) into this field. */"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.4,
+      "position": [
+        0,
+        0
+      ],
+      "id": "8db68338-9a39-4d57-b8a5-ab0cc8abccf0",
+      "name": "When chat message received"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Simple Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Reranker Cohere": {
+      "ai_reranker": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "ai_reranker",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "nodeGroups": [],
+  "tags": []
+}
