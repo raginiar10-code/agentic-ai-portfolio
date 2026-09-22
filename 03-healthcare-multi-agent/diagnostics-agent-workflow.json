@@ -1,0 +1,225 @@
+{
+  "name": "Diagnostics Agent",
+  "nodes": [
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.query }}",
+        "options": {
+          "systemMessage": "=# Role\nYou are a **Diagnostics Services Agent**.\nYou help users:\n1) find which hospitals offer a requested **Diagnostic Test** or **Health Package**, and  \n2) provide the **Preparation Instructions** from the dataset.\n\n# Important safety constraint\n- You are **not a doctor** and you must not diagnose or provide medical advice.\n- If the user asks \"what test should I take for symptoms\", respond that you can show available tests/packages and preparation steps, but they should confirm test choice with a clinician.\n\n# Data source (use tools only)\nDataset columns (Google Sheet):  \n`Provider ID, Hospital Name, Address, City, State, ZIP Code, Phone Number, Hospital Type, Emergency Services, Diagnostic Test, Health Package, Preparation Instructions` (plus other columns).\n\nAvailable values in the dataset (use these exact names when filtering):\n- Diagnostic Tests: Blood Test, CT Scan, Cholesterol Test, ECG, MRI Scan, Ultrasound, X-Ray\n- Health Packages: Cancer Screening, Diabetes Management, Full Body Checkup, Heart Care Package, Orthopedic Package, Women's Wellness Package\n\n# Tools\n- `lab_tests_by_diagnostic_test` (Google Sheets): filter by **Diagnostic Test**\n- `lab_tests_by_health_package` (Google Sheets): filter by **Health Package**\n- `lab_tests_by_zip` (Google Sheets): filter by **ZIP Code** (use when user wants \"near me\" and gives ZIP)\n- `email_user` (Gmail): send preparation instructions if the user explicitly asks to email them\n\n# Workflow\n1. Determine if the user is asking for:\n   - preparation instructions, or\n   - where to get a specific test/package, or\n   - \"near me\" (needs ZIP Code).\n2. If the user didn't specify a test/package:\n   - Ask them to choose one from the dataset list above, and ask their ZIP Code (if they want nearby options).\n3. Call the most appropriate tool:\n   - If user specifies a Diagnostic Test → call `lab_tests_by_diagnostic_test`\n   - If user specifies a Health Package → call `lab_tests_by_health_package`\n   - If user specifies ZIP for nearby options → call `lab_tests_by_zip`\n4. From the returned rows:\n   - Prefer hospitals matching the user's ZIP (or City/State if provided).\n   - Show up to 5 hospitals.\n5. Always include **Preparation Instructions** exactly as provided in the dataset.\n6. If the user asks to email the instructions:\n   - Ask for their email if missing.\n   - Call `email_user` with `To`, `Subject`, `Message`.\n\n# Output format (plain text)\nUse headings, for example:\n\n**Recommended Option**  \n<Hospital Name> — <City, State ZIP> — <Phone Number>\n\n**Preparation Instructions**  \n<text from the sheet>\n\nAvoid tables and JSON. Keep it short and readable.\n\n# Gmail tool call fields\nWhen you send an email using `email_user`, fill:\n- `To`\n- `Subject`\n- `Message`\n\n#Guardrails\n- Only call lab_tests_by_zip if the user explicitly provides a ZIP code. Otherwise do not call it."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.9,
+      "position": [480, 352],
+      "id": "be622428-9126-481c-abce-8230cd13e3a0",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4.1",
+          "mode": "list",
+          "cachedResultName": "gpt-4.1"
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [272, 608],
+      "id": "66720135-1947-42fb-9272-2f1477fd3bbe",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "REPLACE_WITH_YOUR_OPENAI_CREDENTIAL_ID",
+          "name": "Your OpenAI Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "inputSource": "jsonExample",
+        "jsonExample": "{\n  \"query\": \"What is the preparation for an MRI Scan?\"\n}"
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [192, 352],
+      "id": "ccfdf883-946a-49f2-bc92-65ea42773709",
+      "name": "When Executed by Another Workflow"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "REPLACE_WITH_YOUR_LAB_TESTS_SHEET_ID",
+          "mode": "list",
+          "cachedResultName": "lab_tests",
+          "cachedResultUrl": ""
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": ""
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Diagnostic Test",
+              "lookupValue": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('values0_Value', ``, 'string') }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.5,
+      "position": [720, 608],
+      "id": "d59fcf38-3dcf-454a-b991-1278fcea88cb",
+      "name": "lab_tests_by_diagnostic_test",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "REPLACE_WITH_YOUR_GOOGLE_SHEETS_CREDENTIAL_ID",
+          "name": "Your Google Sheets Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "REPLACE_WITH_YOUR_LAB_TESTS_SHEET_ID",
+          "mode": "list",
+          "cachedResultName": "lab_tests",
+          "cachedResultUrl": ""
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": ""
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Health Package",
+              "lookupValue": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('values0_Value', ``, 'string') }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.5,
+      "position": [896, 608],
+      "id": "8a6b6204-abac-4aef-a5e3-e108f2cf7f3d",
+      "name": "lab_tests_by_health_package",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "REPLACE_WITH_YOUR_GOOGLE_SHEETS_CREDENTIAL_ID",
+          "name": "Your Google Sheets Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "REPLACE_WITH_YOUR_LAB_TESTS_SHEET_ID",
+          "mode": "list",
+          "cachedResultName": "lab_tests",
+          "cachedResultUrl": ""
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": ""
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "ZIP Code",
+              "lookupValue": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('values0_Value', ``, 'string') }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.5,
+      "position": [1056, 608],
+      "id": "c39e37d1-e7d9-4217-ae14-b0f5c1f037a3",
+      "name": "lab_tests_by_zip",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "REPLACE_WITH_YOUR_GOOGLE_SHEETS_CREDENTIAL_ID",
+          "name": "Your Google Sheets Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('To', ``, 'string') }}",
+        "subject": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Subject', `Email subject`, 'string') }}",
+        "message": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Message', `Email body`, 'string') }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [1216, 608],
+      "id": "29baeb41-bf73-403e-ad99-6fe45ed4251e",
+      "name": "email_user",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "REPLACE_WITH_YOUR_GMAIL_CREDENTIAL_ID",
+          "name": "Your Gmail Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Diagnostics Services Agent (Sub-workflow)\n\n**What it does**\n- Finds hospitals offering a requested Diagnostic Test or Health Package\n- Returns the dataset's Preparation Instructions\n- (Optional) Emails the instructions via Gmail if the user asks\n\n**You must configure**\n1) Google Sheets document + tab for `Hospital_Information_with_Lab_Tests`\n2) Gmail credential (optional)",
+        "height": 756,
+        "width": 1680
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [0, 16],
+      "id": "14850acf-3bca-491d-ab19-e6516a8ea231",
+      "name": "Sticky Note"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [[{"node": "AI Agent", "type": "ai_languageModel", "index": 0}]]
+    },
+    "When Executed by Another Workflow": {
+      "main": [[{"node": "AI Agent", "type": "main", "index": 0}]]
+    },
+    "lab_tests_by_diagnostic_test": {
+      "ai_tool": [[{"node": "AI Agent", "type": "ai_tool", "index": 0}]]
+    },
+    "lab_tests_by_health_package": {
+      "ai_tool": [[{"node": "AI Agent", "type": "ai_tool", "index": 0}]]
+    },
+    "lab_tests_by_zip": {
+      "ai_tool": [[{"node": "AI Agent", "type": "ai_tool", "index": 0}]]
+    },
+    "email_user": {
+      "ai_tool": [[{"node": "AI Agent", "type": "ai_tool", "index": 0}]]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "nodeGroups": [],
+  "tags": []
+}
