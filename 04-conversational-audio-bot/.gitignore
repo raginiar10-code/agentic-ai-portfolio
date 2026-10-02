@@ -1,0 +1,21 @@
+# Secrets
+.env
+.env.local
+ 
+# Generated at runtime
+tfidf_vectorizer.pkl
+knowledge_base.json
+embeddings.npy
+temp_input.wav
+ai_response.mp3
+ 
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.venv/
+ 
+# OS
+.DS_Store
+Thumbs.db
