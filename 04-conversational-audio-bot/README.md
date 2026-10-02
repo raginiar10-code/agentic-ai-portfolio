@@ -32,8 +32,12 @@ Four sequential stages. Each one has to finish before the next can start. This i
 **System configuration (sidebar) and audio input:**
 ![Audio bot top view](./demo-top.png)
 
+
+
 **Full pipeline running — transcription, retrieval, reasoning, synthesis, and the measured TTFA:**
 ![Pipeline execution](./demo-pipeline.png)
+
+
 
 **Knowledge base viewer — the facts the agent is grounded against:**
 ![Knowledge base](./demo-knowledge-base.png)
