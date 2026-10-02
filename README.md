@@ -15,6 +15,7 @@ I lead quality for complex systems, and agentic AI changes what and how we valid
 | 01 | [Message Routing Agent](https://github.com/raginiar10-code/agentic-ai-portfolio/tree/main/01-message-routing-agent) | Classifies unstructured inbound messages (Demo / Support / Spam), extracts structured fields, and logs each to the right destination | n8n, OpenAI (GPT-4.1-mini), Google Sheets |
 | 02 | [RAG Knowledge Agent — NovaCart](https://github.com/raginiar10-code/agentic-ai-portfolio/tree/main/02-rag-knowledge-agent) | Two-pipeline RAG system: scheduled ingestion of Google Drive docs into Pinecone, plus a grounded chat agent that answers strictly from retrieved content with a Cohere reranker and hard fallback. Verified working end-to-end. | n8n, OpenAI (GPT-4.1-mini + embeddings), Pinecone, Cohere, Google Drive |
 | 03 | [Healthcare Multi-Agent System](./03-healthcare-multi-agent) | A coordinator agent that routes user requests to one of three specialist sub-agents (booking, hospital comparison, diagnostics), each with its own tools, data sources, and guardrails. Verified working end-to-end. | n8n, OpenAI (GPT-4.1), Google Sheets, Gmail |
+| 04 | [Conversational Audio Bot](./04-conversational-audio-bot) | A voice-first conversational assistant built in Python / Streamlit. You speak into the mic, it transcribes, retrieves relevant context from a local knowledge base, reasons over it, and speaks the answer back. | Streamlit, OpenAI Whisper, TF-IDF, OpenAI GPT-4o, gTTS, Vector store |
 
 More coming — one project per week.
 
