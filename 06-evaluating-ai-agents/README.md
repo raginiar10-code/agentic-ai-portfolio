@@ -44,7 +44,7 @@ Honest framing:
 | Step                                      | Status                                                                           |
 | ----------------------------------------- | -------------------------------------------------------------------------------- |
 | Build agent + structured output           | ✅ Done                                                                           |
-| Trace to LangSmith (automatic)            | ✅ Done — traces appeared in the default project                                  |
+| Trace to LangSmith (automatic)            | ⏸️ Deferred — the default-project view in the LangSmith UI didn't surface for me on first pass; left for a follow-up                                  |
 | Upload golden dataset to LangSmith        | ✅ Done                                                                           |
 | Fetch dataset locally in Python           | ✅ Done                                                                           |
 | Define DeepEval metrics (ExactMatch + GEval) | ✅ Done                                                                        |
