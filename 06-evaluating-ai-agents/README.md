@@ -101,7 +101,7 @@ The core LLMOps pattern this exercise teaches:
 - Google Colab (or local Jupyter)
 - OpenAI API key with GPT-4o-mini access
 - LangSmith account + API key (free tier available at [smith.langchain.com](https://smith.langchain.com))
-- The golden dataset JSONL — download from the course materials or build your own (6+ labeled signup → expected-output pairs)
+- The golden dataset JSONL — build your own (6+ labeled signup → expected-output pairs)
 
 ### Setup
 
