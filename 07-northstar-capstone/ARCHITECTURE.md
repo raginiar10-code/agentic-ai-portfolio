@@ -2,6 +2,8 @@
 
 **Capstone Exercise ** · Execution strategy, agent architecture, orchestration patterns, evaluation plan, and future-state roadmap.
 
+**[Demo video](https://drive.google.com/file/d/1KSxrxj2WXw-xuPySGRgvOnTfTl3LHSPM/view?usp=sharing)**
+
 > **Two build phases.** Sections 1–15 are the original 7-day MVP. Sections 16–18 are a second
 > pass, built after an instructor review session surfaced gaps (persistent child data, login,
 > consent, conversation memory, live correctness judging, human-in-the-loop review) — see
