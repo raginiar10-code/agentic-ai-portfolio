@@ -55,6 +55,10 @@ Every response — from either workflow — passes through a shared Safety Criti
 
 ![Sidebar showing login state, the standing navigator-not-clinician disclaimer, and a saved child profile with a confirmation message](docs/screenshots/04-child-profile-saved.png)
 
+**LangSmith observability — trace count/latency/cost over the last 7 days, and per-model/per-tool call share:**
+
+![LangSmith project dashboard for northstar showing trace count, latency (P50/P99), cost over 7 days, and a breakdown of calls by model (gpt-4o, gpt-4o-mini) and tool (directory_lookup)](docs/screenshots/05-langsmith-observability.png)
+
 ---
 
 ## Phase 2 — built in response to instructor review feedback
@@ -185,12 +189,6 @@ Plus PII protection (child names/specific details aren't surfaced in responses) 
 ├── PRESS_RELEASE_AND_FAQ.md
 └── BUILD_LOG.md
 ```
-
----
-
-## Screenshots
-
-_To be added — chat with the transparency panel open, a Daily Support activity suggestion, the feedback flow, a LangSmith trace, and the eval delta._
 
 ---
 
