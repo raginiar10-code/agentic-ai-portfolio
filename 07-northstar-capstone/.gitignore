@@ -1,0 +1,19 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
+.streamlit/secrets.toml
+.DS_Store
+HOW-TO-RUN.txt
+# Real parent accounts + child profile data created by actually running the app -- generated,
+# personal data, never something a repo should carry (unlike kb/*.json's fictional seed content).
+northstar.db
+*.db-journal
+
+# Demo recording -- too large for GitHub (>100MB hard limit); shared via Drive instead.
+docs/DemoRecording.mp4

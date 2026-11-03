@@ -1,0 +1,61 @@
+[
+  {
+    "id": "occupational-therapy",
+    "name": "Occupational Therapy (OT)",
+    "addresses": "Fine motor skills, sensory processing, self-care tasks (dressing, eating, handwriting), and overall participation in daily 'occupations' of childhood — play, school, self-care.",
+    "commonly_explored_for": [
+      { "condition": "Autism Spectrum Disorder", "rationale": "Sensory regulation strategies and fine motor/self-care skill building." },
+      { "condition": "Sensory Processing Disorder", "rationale": "OT is typically the primary discipline for sensory integration support." },
+      { "condition": "Developmental Coordination Disorder", "rationale": "Builds fine motor coordination and compensatory strategies for daily tasks." },
+      { "condition": "Bryant-Li-Bhoj Neurodevelopmental Syndrome 2", "rationale": "Supports motor milestone development and daily living skills given global developmental delay." }
+    ],
+    "typical_session_format": "Usually 30-60 minutes, often play-based for younger children, in a clinic with sensory/motor equipment or at home/school. Frequency varies from weekly to a few times a week depending on need.",
+    "honest_limits": "OT does not treat core social-communication differences in autism, does not diagnose conditions, and is not a substitute for medical or psychiatric care. Progress is often gradual and non-linear."
+  },
+  {
+    "id": "speech-language-therapy",
+    "name": "Speech-Language Therapy (SLT)",
+    "addresses": "Spoken language (expressive and receptive), speech sound production, motor planning for speech, social communication (pragmatics), and in some cases feeding/swallowing.",
+    "commonly_explored_for": [
+      { "condition": "Childhood Apraxia of Speech", "rationale": "This is the primary and most intensive therapy for CAS — targets motor planning for speech directly." },
+      { "condition": "Autism Spectrum Disorder", "rationale": "Supports both functional communication and social communication/pragmatics." },
+      { "condition": "Bryant-Li-Bhoj Neurodevelopmental Syndrome 2", "rationale": "Addresses absent or significantly delayed spoken language; may include augmentative communication." }
+    ],
+    "typical_session_format": "Usually 30-45 minutes, 1-3 times weekly depending on severity, often drill-based with high repetition for motor speech goals, or play/conversation-based for pragmatics goals.",
+    "honest_limits": "SLT cannot speed up motor-planning recovery faster than a child's individual neurology allows, and consistent attendance matters more than any single technique. It does not address non-speech-related developmental concerns."
+  },
+  {
+    "id": "behavioral-therapy",
+    "name": "Behavioral Therapy",
+    "addresses": "Observable behaviors — reducing behaviors that interfere with learning or safety, and building adaptive skills (communication, self-regulation, social skills) through structured, evidence-based teaching methods.",
+    "commonly_explored_for": [
+      { "condition": "Autism Spectrum Disorder", "rationale": "Widely used to build communication, social, and adaptive skills; approaches vary (ABA is the most studied, though not without debate in the autism community about intensity and approach)." },
+      { "condition": "ADHD", "rationale": "Behavioral strategies (routines, reinforcement systems, parent training) are a first-line, evidence-based approach, often before or alongside medication." }
+    ],
+    "typical_session_format": "Highly variable: from a few hours a week of parent-training-focused sessions to intensive multi-hour daily programs, depending on the specific approach and the child's needs.",
+    "honest_limits": "Not every behavioral approach suits every family or child, and the autism community has real, documented debate about intensity and approach — a good provider discusses goals and approach with you, not just hours. Behavioral therapy does not change a child's underlying neurology."
+  },
+  {
+    "id": "physical-therapy",
+    "name": "Physical Therapy (PT)",
+    "addresses": "Gross motor skills — strength, balance, coordination, gait, and overall movement function.",
+    "commonly_explored_for": [
+      { "condition": "Developmental Coordination Disorder", "rationale": "Builds gross motor coordination, balance, and confidence in movement." },
+      { "condition": "Bryant-Li-Bhoj Neurodevelopmental Syndrome 2", "rationale": "Supports gross motor milestone progress (sitting, walking) given hypotonia and delayed motor development." }
+    ],
+    "typical_session_format": "Usually 30-45 minutes, often in a gym-like clinic setting with mats, balance equipment, and age-appropriate movement games. Frequency depends on severity of motor delay.",
+    "honest_limits": "PT cannot guarantee a specific motor milestone (e.g. independent walking) will be reached — progress depends heavily on the underlying condition. It addresses movement, not fine motor, speech, or sensory needs."
+  },
+  {
+    "id": "developmental-pediatrics",
+    "name": "Developmental Pediatrics",
+    "addresses": "The medical 'gateway' specialty for neurodevelopmental concerns — evaluation, diagnosis, coordination of the overall care team, and medical management (including medication decisions where relevant).",
+    "commonly_explored_for": [
+      { "condition": "Autism Spectrum Disorder", "rationale": "Typically the specialist who provides formal diagnosis and coordinates referrals to OT/SLT/behavioral therapy." },
+      { "condition": "ADHD", "rationale": "Diagnoses ADHD and, if appropriate, discusses and manages medication options." },
+      { "condition": "Bryant-Li-Bhoj Neurodevelopmental Syndrome 2", "rationale": "Coordinates genetics referrals, overall care, and connects family to the small but growing community of clinicians familiar with H3.3-related disorders." }
+    ],
+    "typical_session_format": "Clinic visits, typically less frequent than therapy sessions (every few months), focused on evaluation, monitoring, and care coordination rather than hands-on skill-building.",
+    "honest_limits": "This is the specialty NorthStar always defers to for diagnosis and treatment decisions — it is not something this KB entry (or NorthStar generally) can substitute for."
+  }
+]

@@ -1,0 +1,291 @@
+[
+  {
+    "id": "weighted-lap-pad-quiet-time",
+    "name": "Weighted Lap Pad Quiet Time",
+    "category": "sensory_regulation_calming",
+    "need": "regulation",
+    "age_range": "3-10",
+    "condition_relevance": ["autism-spectrum-disorder", "sensory-processing-disorder", "adhd"],
+    "materials_needed": ["Weighted lap pad or heavy blanket", "Quiet corner or cushion"],
+    "steps": [
+      "Find a quiet spot away from bright lights and loud sounds",
+      "Place the weighted pad on the child's lap or shoulders",
+      "Sit together or let the child sit alone for 5-10 minutes",
+      "Offer a calm activity (book, soft music) if the child wants one"
+    ],
+    "why_it_helps": "Deep pressure input is calming for many children because it activates the proprioceptive and tactile systems in a way that reduces overall arousal — commonly used in OT sensory diets.",
+    "duration_minutes": 10
+  },
+  {
+    "id": "bear-hug-deep-pressure-squeeze",
+    "name": "Bear Hug Deep Pressure Squeeze",
+    "category": "sensory_regulation_calming",
+    "need": "regulation",
+    "age_range": "2-12",
+    "condition_relevance": ["autism-spectrum-disorder", "sensory-processing-disorder"],
+    "materials_needed": ["None — just willing hands"],
+    "steps": [
+      "Ask the child if they'd like a tight hug (always ask first — consent matters)",
+      "Give a firm, sustained squeeze hug for 10-20 seconds",
+      "Release slowly, check in on how they feel",
+      "Repeat 2-3 times if the child wants more"
+    ],
+    "why_it_helps": "Firm, sustained pressure is regulating for many children with sensory sensitivities, similar in effect to a weighted blanket, and strengthens connection through a child-led, consent-based interaction.",
+    "duration_minutes": 5
+  },
+  {
+    "id": "slow-swing-time",
+    "name": "Slow Swing Time",
+    "category": "sensory_regulation_calming",
+    "need": "regulation",
+    "age_range": "2-10",
+    "condition_relevance": ["autism-spectrum-disorder", "sensory-processing-disorder"],
+    "materials_needed": ["Swing (playground or indoor sensory swing)"],
+    "steps": [
+      "Settle the child into the swing securely",
+      "Push or rock gently and slowly, avoiding sudden speed changes",
+      "Keep movement rhythmic and predictable",
+      "Narrate calmly if the child finds words soothing ('slow... and... slow...')"
+    ],
+    "why_it_helps": "Slow, rhythmic vestibular (movement) input tends to calm the nervous system, while fast or unpredictable movement tends to excite it — useful distinction for regulation-focused play.",
+    "duration_minutes": 10
+  },
+  {
+    "id": "animal-walk-obstacle-course",
+    "name": "Animal Walk Obstacle Course",
+    "category": "sensory_regulation_alerting",
+    "need": "regulation",
+    "age_range": "4-10",
+    "condition_relevance": ["adhd", "developmental-coordination-disorder", "sensory-processing-disorder"],
+    "materials_needed": ["Open floor space", "Pillows or cushions (optional obstacles)"],
+    "steps": [
+      "Set up a simple path (crawl under a table, step over cushions, hop to the end)",
+      "Demonstrate 'animal walks' — bear crawl, frog jump, crab walk — along the path",
+      "Have the child do 2-3 laps, switching animals each time",
+      "Cool down with a slow walk at the end"
+    ],
+    "why_it_helps": "Heavy, whole-body movement provides alerting proprioceptive input that can help an under-aroused or inattentive child become more organized and ready to focus afterward.",
+    "duration_minutes": 10
+  },
+  {
+    "id": "textured-sensory-bin-exploration",
+    "name": "Textured Sensory Bin Exploration",
+    "category": "sensory_regulation_alerting",
+    "need": "regulation",
+    "age_range": "2-8",
+    "condition_relevance": ["autism-spectrum-disorder", "sensory-processing-disorder"],
+    "materials_needed": ["Shallow bin", "Rice, dried beans, or sand", "Small scoops/cups/toys to bury and find"],
+    "steps": [
+      "Fill the bin with the chosen material",
+      "Hide a few small toys inside",
+      "Let the child dig, scoop, and search with hands or tools",
+      "Follow the child's lead on how long and how intensely they engage"
+    ],
+    "why_it_helps": "Tactile exploration at the child's own pace builds tolerance for varied textures over time and offers a low-pressure way to engage sensory-seeking behavior constructively.",
+    "duration_minutes": 15
+  },
+  {
+    "id": "bubble-popping-chase",
+    "name": "Bubble Popping Chase",
+    "category": "engagement",
+    "need": "engagement",
+    "age_range": "1-6",
+    "condition_relevance": ["autism-spectrum-disorder", "sensory-processing-disorder"],
+    "materials_needed": ["Bubble solution and wand"],
+    "steps": [
+      "Blow a stream of bubbles into open space",
+      "Encourage the child to chase and pop them",
+      "Pause occasionally and wait for the child to request 'more' (verbally, with a sound, or by reaching)",
+      "Celebrate each pop with enthusiasm"
+    ],
+    "why_it_helps": "The pause-and-wait structure creates natural opportunities for communication attempts, while the visual/motor chase is highly motivating and low-demand.",
+    "duration_minutes": 10
+  },
+  {
+    "id": "cause-and-effect-toy-play",
+    "name": "Cause-and-Effect Toy Play",
+    "category": "engagement",
+    "need": "engagement",
+    "age_range": "1-5",
+    "condition_relevance": ["autism-spectrum-disorder", "bryant-li-bhoj-neurodevelopmental-syndrome-2"],
+    "materials_needed": ["Pop-up toys, switch-activated toys, or simple musical toys"],
+    "steps": [
+      "Show the child the toy's action once (press button, music plays)",
+      "Place the child's hand near the trigger and let them try",
+      "Repeat, gradually reducing your physical help",
+      "Keep sessions short and stop while the child is still interested"
+    ],
+    "why_it_helps": "Cause-and-effect toys teach a foundational concept — 'my action changes the world' — which is especially valuable for children with significant developmental delay who are building early engagement and intentionality.",
+    "duration_minutes": 10
+  },
+  {
+    "id": "special-interest-story-time",
+    "name": "Special-Interest Story Time",
+    "category": "engagement",
+    "need": "engagement",
+    "age_range": "3-10",
+    "condition_relevance": ["autism-spectrum-disorder", "adhd"],
+    "materials_needed": ["Books, videos, or toys related to the child's special interest"],
+    "steps": [
+      "Choose material tied directly to the child's current special interest",
+      "Read, watch, or play together, letting the child lead the pace",
+      "Ask open questions about what they notice ('What's your favorite part?')",
+      "Follow tangents the child introduces rather than redirecting to 'stay on topic'"
+    ],
+    "why_it_helps": "Building on a child's special interest dramatically increases engagement and motivation, and research-informed practice treats special interests as a strength to build from, not something to redirect away from.",
+    "duration_minutes": 15
+  },
+  {
+    "id": "clothespin-pinching-game",
+    "name": "Clothespin Pinching Game",
+    "category": "motor_skill",
+    "need": "engagement",
+    "age_range": "3-7",
+    "condition_relevance": ["developmental-coordination-disorder", "sensory-processing-disorder"],
+    "materials_needed": ["Clothespins", "A cup, box edge, or small container"],
+    "steps": [
+      "Show the child how to pinch open a clothespin and clip it to an edge",
+      "Let the child clip 5-10 clothespins around a cup or box edge",
+      "Make it a game — clip by color, or race against a timer",
+      "Reverse the task — unclip them all"
+    ],
+    "why_it_helps": "The pinching motion directly strengthens the small hand muscles used in handwriting and buttoning, making it a targeted fine-motor exercise disguised as play.",
+    "duration_minutes": 10
+  },
+  {
+    "id": "obstacle-course-crawl-climb-balance",
+    "name": "Obstacle Course: Crawl, Climb, Balance",
+    "category": "motor_skill",
+    "need": "engagement",
+    "age_range": "4-10",
+    "condition_relevance": ["developmental-coordination-disorder", "bryant-li-bhoj-neurodevelopmental-syndrome-2"],
+    "materials_needed": ["Cushions, a low step or stool, a taped line on the floor"],
+    "steps": [
+      "Set up 3-4 stations: crawl under a table, step over cushions, walk along a taped line, climb onto a low stool",
+      "Demonstrate the course once",
+      "Let the child go through at their own pace, offering a hand for balance stations if needed",
+      "Repeat 2-3 times, celebrating effort over speed"
+    ],
+    "why_it_helps": "Sequencing different gross-motor challenges in one course builds coordination, balance, and body awareness incrementally, with each child progressing at their own level of support.",
+    "duration_minutes": 15
+  },
+  {
+    "id": "playdough-squeeze-and-roll",
+    "name": "Playdough Squeeze and Roll",
+    "category": "motor_skill",
+    "need": "engagement",
+    "age_range": "2-8",
+    "condition_relevance": ["developmental-coordination-disorder", "childhood-apraxia-of-speech"],
+    "materials_needed": ["Playdough or therapy putty", "Rolling pin and simple cutters (optional)"],
+    "steps": [
+      "Give the child a ball of playdough to squeeze, pull, and roll",
+      "Introduce simple shapes with cutters if the child is interested",
+      "Encourage rolling 'snakes' and pinching 'pancakes' flat",
+      "Let the child direct what they want to make"
+    ],
+    "why_it_helps": "Squeezing and manipulating resistant materials strengthens hand muscles used for handwriting and self-care tasks, while remaining an open-ended, low-pressure activity.",
+    "duration_minutes": 15
+  },
+  {
+    "id": "choice-board-snack-time",
+    "name": "Choice Board Snack Time",
+    "category": "communication",
+    "need": "engagement",
+    "age_range": "2-8",
+    "condition_relevance": ["autism-spectrum-disorder", "childhood-apraxia-of-speech", "bryant-li-bhoj-neurodevelopmental-syndrome-2"],
+    "materials_needed": ["2-3 snack options", "Pictures of each snack (printed or drawn) or the real items visible"],
+    "steps": [
+      "Lay out 2-3 snack choices where the child can see or point to each",
+      "Ask 'Which one?' and wait quietly, giving the child time to respond however they can (pointing, picture, word, sound)",
+      "Honor whatever communication attempt the child makes by giving that snack",
+      "Repeat across the week to build the expectation that communication gets a response"
+    ],
+    "why_it_helps": "Offering structured choices creates low-pressure, motivating opportunities to practice requesting — a foundational communication skill — and works for children at very different language levels.",
+    "duration_minutes": 10
+  },
+  {
+    "id": "picture-schedule-walk-through",
+    "name": "Picture Schedule Walk-Through",
+    "category": "communication",
+    "need": "engagement",
+    "age_range": "3-10",
+    "condition_relevance": ["autism-spectrum-disorder", "adhd"],
+    "materials_needed": ["3-5 pictures or icons representing steps of a routine (e.g. brush teeth, get dressed, eat breakfast)"],
+    "steps": [
+      "Lay out the pictures in order on a strip or board",
+      "Point to each picture as that step happens",
+      "Let the child move or flip the picture to 'done' once completed",
+      "Praise completion of each step, not just the whole routine"
+    ],
+    "why_it_helps": "Visual schedules reduce anxiety around transitions and give non-verbal or emerging-verbal children a way to understand and predict 'what happens next' without relying on spoken instructions alone.",
+    "duration_minutes": 10
+  },
+  {
+    "id": "turn-taking-ball-roll",
+    "name": "Turn-Taking Ball Roll",
+    "category": "communication",
+    "need": "engagement",
+    "age_range": "2-6",
+    "condition_relevance": ["autism-spectrum-disorder", "bryant-li-bhoj-neurodevelopmental-syndrome-2"],
+    "materials_needed": ["A soft ball"],
+    "steps": [
+      "Sit facing the child a short distance apart",
+      "Roll the ball to the child and say 'your turn'",
+      "Wait for them to roll it back, prompting gently if needed",
+      "Add a word cue each turn ('roll!', 'go!') to pair the action with language"
+    ],
+    "why_it_helps": "Simple back-and-forth games build the foundational social-communication skill of reciprocal turn-taking, which underlies conversation later on.",
+    "duration_minutes": 10
+  },
+  {
+    "id": "mirror-game",
+    "name": "Mirror Game",
+    "category": "social_skill",
+    "need": "engagement",
+    "age_range": "3-9",
+    "condition_relevance": ["autism-spectrum-disorder"],
+    "materials_needed": ["None"],
+    "steps": [
+      "Stand facing the child and say 'copy me!'",
+      "Make a simple movement or facial expression (wave, smile, clap)",
+      "Let the child copy you, then switch — you copy them",
+      "Keep it playful and exaggerated to hold attention"
+    ],
+    "why_it_helps": "Mirroring builds joint attention and social reciprocity in a fun, pressure-free format, and taking turns leading/following practices flexible social roles.",
+    "duration_minutes": 10
+  },
+  {
+    "id": "simple-board-game-turn-taking",
+    "name": "Simple Board Game Turn-Taking",
+    "category": "social_skill",
+    "need": "engagement",
+    "age_range": "4-10",
+    "condition_relevance": ["autism-spectrum-disorder", "adhd"],
+    "materials_needed": ["A short, simple board game or card game (e.g. a matching or color game)"],
+    "steps": [
+      "Choose a short game with clear, simple rules",
+      "Model saying 'your turn' and 'my turn' out loud",
+      "Play through 1-2 rounds, prompting turn-taking language as needed",
+      "Acknowledge both winning and losing calmly to model good sportsmanship"
+    ],
+    "why_it_helps": "Structured games provide clear, predictable rules for practicing turn-taking, waiting, and handling the emotions of winning/losing — skills that are harder to teach in unstructured social settings.",
+    "duration_minutes": 15
+  },
+  {
+    "id": "parallel-play-shared-toy-bin",
+    "name": "Parallel Play With a Shared Toy Bin",
+    "category": "social_skill",
+    "need": "engagement",
+    "age_range": "2-6",
+    "condition_relevance": ["autism-spectrum-disorder", "bryant-li-bhoj-neurodevelopmental-syndrome-2"],
+    "materials_needed": ["A bin of toys with duplicates (two of some items) shared between child and a sibling/parent/peer"],
+    "steps": [
+      "Sit near the child, each with access to the shared bin",
+      "Play alongside the child with a similar toy, without requiring direct interaction",
+      "Occasionally comment on what you're doing ('I'm building a tower')",
+      "Let interaction emerge naturally rather than forcing shared play"
+    ],
+    "why_it_helps": "For children not yet ready for interactive play, parallel play is a well-established bridge step — it builds comfort being near others engaged in a similar activity before direct social interaction is expected.",
+    "duration_minutes": 15
+  }
+]

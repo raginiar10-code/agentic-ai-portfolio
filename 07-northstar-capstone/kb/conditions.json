@@ -1,0 +1,131 @@
+[
+  {
+    "id": "autism-spectrum-disorder",
+    "name": "Autism Spectrum Disorder (ASD)",
+    "aliases": ["autism", "ASD"],
+    "overview": "Autism Spectrum Disorder is a developmental condition that affects how a person communicates, interacts socially, and experiences the world around them. It is called a 'spectrum' because it looks different in every child — some children speak fluently and need support mainly with social situations, others are non-speaking and need support with daily communication. ASD is lifelong, not something a child grows out of, but children can and do develop skills and strategies with the right support.",
+    "common_signs": [
+      "Differences in eye contact, facial expression, or back-and-forth conversation",
+      "Strong, narrow interests or repeated movements/sounds (stimming)",
+      "Difficulty with changes in routine",
+      "Sensory sensitivities (over- or under-reaction to sound, light, touch, texture)",
+      "Delayed or atypical language development in some children"
+    ],
+    "terminology": [
+      { "term": "Stimming", "definition": "Repetitive movements or sounds (hand-flapping, rocking, humming) often used for self-regulation. Usually not something to stop unless it's unsafe." },
+      { "term": "Masking", "definition": "Consciously or unconsciously hiding autistic traits to fit in socially; can be exhausting over time." },
+      { "term": "Neurodivergent", "definition": "A brain that works differently from what's considered typical. Not a deficit by itself — a description of difference." },
+      { "term": "Special interest", "definition": "A deep, often intense interest in a specific topic; can be a genuine strength and motivator." }
+    ],
+    "related_therapy_categories": ["occupational-therapy", "speech-language-therapy", "behavioral-therapy", "developmental-pediatrics"],
+    "what_we_dont_cover": "We don't cover formal diagnostic criteria, severity-level classification (Level 1/2/3), or co-occurring conditions in clinical depth. For an actual evaluation or diagnosis, a developmental pediatrician or child psychologist is needed."
+  },
+  {
+    "id": "adhd",
+    "name": "Attention-Deficit/Hyperactivity Disorder (ADHD)",
+    "aliases": ["ADHD", "attention deficit"],
+    "overview": "ADHD affects a child's ability to regulate attention, impulses, and activity level. It shows up differently across children: some are visibly hyperactive and impulsive, others are quieter but struggle to sustain focus (sometimes called the 'inattentive' presentation). ADHD is a difference in brain development related to executive function — the mental skills behind planning, focus, and self-control — not a result of poor parenting or lack of discipline.",
+    "common_signs": [
+      "Difficulty sustaining attention on non-preferred tasks",
+      "Fidgeting, restlessness, or difficulty staying seated",
+      "Acting before thinking through consequences",
+      "Losing track of belongings, instructions, or time",
+      "Big emotional reactions that pass quickly"
+    ],
+    "terminology": [
+      { "term": "Executive function", "definition": "The mental skills used to plan, focus attention, remember instructions, and juggle multiple tasks." },
+      { "term": "Inattentive presentation", "definition": "An ADHD pattern where the main challenge is sustaining focus, with little or no hyperactivity." },
+      { "term": "Hyperfocus", "definition": "Intense, prolonged concentration on a highly engaging task — the flip side of attention regulation difficulty." }
+    ],
+    "related_therapy_categories": ["behavioral-therapy", "developmental-pediatrics"],
+    "what_we_dont_cover": "We don't cover medication options or dosing — that's strictly a conversation for a prescribing physician. We also don't cover formal ADHD subtype diagnosis."
+  },
+  {
+    "id": "childhood-apraxia-of-speech",
+    "name": "Apraxia / Childhood Apraxia of Speech (CAS)",
+    "aliases": ["apraxia", "CAS", "childhood apraxia of speech"],
+    "overview": "Childhood Apraxia of Speech is a motor-planning disorder: the child's brain has trouble sending the right signals to the muscles used for speech (lips, tongue, jaw), even though the muscles themselves work fine. The child knows what they want to say but their mouth has difficulty executing the precise, rapid sequence of movements needed. This is different from a general language delay — it's specifically about the motor planning of speech sounds.",
+    "common_signs": [
+      "Inconsistent errors on the same word said multiple times",
+      "Groping or visible effort when trying to produce sounds",
+      "Better automatic speech (e.g. 'hi') than intentional/imitated speech",
+      "Difficulty sequencing sounds in longer or less familiar words",
+      "Limited sound/syllable repertoire in younger children"
+    ],
+    "terminology": [
+      { "term": "Motor planning", "definition": "The brain's process of organizing and sequencing the precise muscle movements needed for an action — here, speech." },
+      { "term": "Oral-motor", "definition": "Relating to the muscles and movements of the mouth used in speech and eating." },
+      { "term": "Prosody", "definition": "The rhythm, stress, and intonation of speech — often affected in CAS." }
+    ],
+    "related_therapy_categories": ["speech-language-therapy"],
+    "what_we_dont_cover": "We don't cover differentiating CAS from other speech sound disorders in clinical detail — that differential diagnosis needs a speech-language pathologist's hands-on assessment."
+  },
+  {
+    "id": "developmental-coordination-disorder",
+    "name": "Dyspraxia / Developmental Coordination Disorder (DCD)",
+    "aliases": ["dyspraxia", "DCD", "developmental coordination disorder"],
+    "overview": "Developmental Coordination Disorder affects the planning and execution of physical movement — both big movements like running or jumping (gross motor) and small, precise movements like holding a pencil or buttoning a shirt (fine motor). Children with DCD are not 'lazy' or 'careless'; their brains have more difficulty translating an intention to move into a smooth, coordinated action. It's distinct from CAS, which affects speech-specific motor planning rather than whole-body coordination.",
+    "common_signs": [
+      "Appearing clumsy — frequent bumping, tripping, or dropping things",
+      "Difficulty with handwriting, cutting, or buttoning",
+      "Avoidance of sports or playground activities requiring coordination",
+      "Taking longer than peers to learn physical skills like riding a bike",
+      "Fatigue from tasks that require sustained physical effort or concentration"
+    ],
+    "terminology": [
+      { "term": "Gross motor skills", "definition": "Movements using large muscle groups — running, jumping, climbing." },
+      { "term": "Fine motor skills", "definition": "Small, precise movements using hand and finger muscles — writing, buttoning, using scissors." },
+      { "term": "Motor planning", "definition": "The brain's process of organizing a sequence of movements before and during an action." }
+    ],
+    "related_therapy_categories": ["occupational-therapy", "physical-therapy"],
+    "what_we_dont_cover": "We don't cover formal motor-skill assessment scores or school accommodation paperwork — an occupational or physical therapist's evaluation is needed for those."
+  },
+  {
+    "id": "sensory-processing-disorder",
+    "name": "Sensory Processing Disorder (SPD)",
+    "aliases": ["SPD", "sensory processing disorder", "sensory integration dysfunction"],
+    "overview": "Sensory Processing Disorder describes difficulty receiving and responding to sensory information from the body and environment — sound, touch, movement, light, taste, and body position. Some children are 'sensory seeking' (craving more input — spinning, crashing into things, loud noise) and others are 'sensory avoidant' (overwhelmed by input that others tolerate easily — tags on clothing, background noise, bright light). Many children show a mix of both depending on the sense involved. SPD often co-occurs with ASD and ADHD but can also appear on its own.",
+    "common_signs": [
+      "Extreme reactions to textures, sounds, lights, or smells that don't bother most children",
+      "Seeking out intense movement, pressure, or sensory input",
+      "Difficulty with transitions involving sensory change (noisy cafeteria, scratchy clothing)",
+      "Appearing clumsy due to under-registering body position in space (proprioception)",
+      "Meltdowns that follow sensory overload rather than a specific demand"
+    ],
+    "terminology": [
+      { "term": "Sensory seeking", "definition": "Actively pursuing more sensory input than typical — spinning, jumping, touching everything." },
+      { "term": "Sensory avoidant", "definition": "Finding ordinary sensory input overwhelming or unpleasant and actively avoiding it." },
+      { "term": "Proprioception", "definition": "The sense of where your body parts are in space, without looking — important for coordination and body awareness." },
+      { "term": "Sensory diet", "definition": "A planned set of sensory activities (used in OT) designed to help a child stay regulated throughout the day." }
+    ],
+    "related_therapy_categories": ["occupational-therapy"],
+    "what_we_dont_cover": "SPD is not currently a standalone diagnosis in the DSM-5 — it's typically addressed clinically as part of an OT evaluation alongside another diagnosis. We don't adjudicate that classification debate; we focus on practical sensory support."
+  },
+  {
+    "id": "bryant-li-bhoj-neurodevelopmental-syndrome-2",
+    "name": "Bryant-Li-Bhoj Neurodevelopmental Syndrome 2 (BLBS2)",
+    "aliases": ["BLBS2", "Li-Bhoj syndrome", "H3F3B-related neurodevelopmental disorder"],
+    "overview": "Bryant-Li-Bhoj Neurodevelopmental Syndrome 2 is an ultra-rare genetic condition caused by a heterozygous (single-copy) variant in the H3F3B gene on chromosome 17, which encodes one of the two genes that produce histone H3.3 — a protein involved in how DNA is packaged and read inside cells. It was only recently characterized in the clinical genetics literature, so published experience is still limited to a few dozen documented individuals worldwide. It causes global developmental delay or intellectual disability, usually moderate to severe, along with delayed motor milestones and little or no spoken language in many affected children. Because it's so newly described, families often find very little lay-accessible information — this entry draws directly from the primary clinical research literature rather than general knowledge.",
+    "common_signs": [
+      "Global developmental delay or intellectual disability (typically moderate-to-severe)",
+      "Absent, minimal, or significantly delayed spoken language",
+      "Delayed motor milestones (sitting, walking) — some children never reach independent walking",
+      "Hypotonia (reduced muscle tone)",
+      "Differences in facial features and, in some individuals, abnormal brain imaging findings",
+      "In some adults, a neurodegenerative component (skill loss over time) has been reported, though the condition is primarily neurodevelopmental"
+    ],
+    "terminology": [
+      { "term": "Histone H3.3", "definition": "A protein that DNA wraps around inside the cell nucleus; it affects which genes get turned on or off. H3F3A and H3F3B are the two genes that produce it." },
+      { "term": "Heterozygous variant", "definition": "A change in only one of the two copies of a gene (one inherited from each parent) — sufficient here to cause the condition." },
+      { "term": "Global developmental delay", "definition": "A child is behind expected milestones across multiple areas at once (motor, speech, cognition) rather than in just one domain." },
+      { "term": "De novo variant", "definition": "A genetic change that arose newly in the child and was not inherited from either parent — common in BLBS2." }
+    ],
+    "related_therapy_categories": ["occupational-therapy", "speech-language-therapy", "physical-therapy", "developmental-pediatrics"],
+    "what_we_dont_cover": "Because BLBS2 is so newly documented, we deliberately do not speculate about long-term prognosis, life expectancy, or the neurodegenerative component beyond what's published — the published cohort is small and individual variation is significant. Genetic counseling and a specialist familiar with H3.3-related disorders (often at an academic medical center) is strongly recommended over general information sources, including this one.",
+    "sources": [
+      "Layo-Carris et al. 2024, 'Expanded phenotypic spectrum of Bryant-Li-Bhoj syndrome' — PMC11291762",
+      "GeneReviews: Bryant-Li-Bhoj Neurodevelopmental Syndrome — NBK595206",
+      "Disease Ontology DOID:0051012 (BLBS2)"
+    ]
+  }
+]
