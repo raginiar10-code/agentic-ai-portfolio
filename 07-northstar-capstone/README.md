@@ -4,6 +4,8 @@
 
 NorthStar is a multi-agent AI system that helps parents of children with autism, ADHD, apraxia, and other neurodevelopmental conditions understand what they're facing, explore therapy categories, find specialists, and get daily activity support — without ever diagnosing, prescribing, or guessing. It was built as the capstone project for applied agentic AI course.
 
+**Tool track: Python** — LangChain + Pydantic for the agents, Streamlit for the UI, SQLite for persistence. No n8n or Langflow.
+
 **[Demo video](https://drive.google.com/file/d/1KSxrxj2WXw-xuPySGRgvOnTfTl3LHSPM/view?usp=sharing)**
 
 Full product vision: [`PRESS_RELEASE_AND_FAQ.md`](PRESS_RELEASE_AND_FAQ.md) · Full technical design: [`ARCHITECTURE.md`](ARCHITECTURE.md) · Day-by-day build log: [`BUILD_LOG.md`](BUILD_LOG.md)
