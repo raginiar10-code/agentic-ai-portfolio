@@ -35,6 +35,26 @@ Every response — from either workflow — passes through a shared Safety Criti
 
 ---
 
+## Screenshots
+
+**Ask NorthStar — grounded explanation of a condition, with retrieval provenance shown on request:**
+
+![Ask NorthStar workflow answering "what is li bhoj syndrome" with a grounded explanation, a disclaimer, and a "How did I arrive at this?" provenance toggle](docs/screenshots/01-ask-northstar-info.png)
+
+**Daily Support — a grounded activity suggestion, sidebar quick-actions and child profile context:**
+
+![Daily Support workflow suggesting "Slow Swing Time" with materials, steps, and why it helps, sidebar showing quick-action buttons and the saved child profile](docs/screenshots/02-daily-support-activity.png)
+
+**Review queue + Observability — the minimal HITL queue and per-session trace summary in the sidebar:**
+
+![Sidebar showing the Review queue and Observability sections, with a note that full per-agent traces are in LangSmith](docs/screenshots/03-review-queue-observability.png)
+
+**Persistence in action — account login, safety disclaimer, and a saved child profile confirmed across sessions:**
+
+![Sidebar showing login state, the standing navigator-not-clinician disclaimer, and a saved child profile with a confirmation message](docs/screenshots/04-child-profile-saved.png)
+
+---
+
 ## Phase 2 — built in response to instructor review feedback
 
 A review session surfaced real gaps for anything beyond a one-off demo: no memory of a parent across visits, no login, no consent before storing anything, no correctness judging on the live response path, and no way to review what the Safety Critic was catching. Built in small, individually-verified chunks (full day-by-day record, including bugs found and design corrections caught mid-build, in [`BUILD_LOG.md`](BUILD_LOG.md)):
